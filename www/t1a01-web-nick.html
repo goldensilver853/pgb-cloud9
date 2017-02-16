@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>T3A01 - First webpage</title>
+        <link rel="stylesheet" type="text/css" href="greencarbon.css">
+        
+    </head>
+    <body onwheel="{
+	document.getElementById('myWheel').innerHTML = 'NO! NO SCROLLING FOR YOU'
+	}">
+        <div id="main">
+        <h1 align=center>T3A01</h1>
+        <marquee class="rlMarquee" direction="left" scrollamount="13" behavior="alternate">scrolling things are neat</marquee>
+        <p>Hello</p>
+        <br>
+        <a href="https://abbotsford.craigslist.ca/sys/5980046726.html">Buy this laptop</a>
+        <br>
+        <b>Welcome to the land of bold text.</b>
+        <br>
+        <img src="https://images.craigslist.org/00Y0Y_38dW03075UN_600x450.jpg" width=200>
+        <br>
+        <i>You know you <font color=red>want</font> to buy that laptop.</i>
+        <input type=button value="you're" onclick="{
+        alert('fired.')
+        }">
+        <details>
+            <summary>Cool input options</summary>
+            <select>
+            <option value="9">9</option>
+            <option value="11">11</option>
+            </select><br>
+            <textarea>Disks out for Harambe</textarea><br>
+            <input type="tel">Input your telephone number<br> 
+            <input type="week" name="week_year">Input the week<br> 
+            <input type="time" name="usr_time">Input the time<br> 
+            <input type="search" name="googlesearch"> Search<br> 
+            <input type="checkbox" name="a" value="a">Check your privilage<br>
+            <input type="radio">This is actually not a radio<br>
+        </details>
+        <details>
+            <summary>Cool media things</summary>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AIoLjfpMKro" frameborder="0" allowfullscreen></iframe><br>
+            <p>Fun fact- you cannot line up that red LED directly in line with the white LED used for illumating the keyboard. 56 ohm resistor works well here.</p>
+        </details>
+        <p>List of what happens when the bell rings:</p>
+        <ol>
+            <li>Pack up materials</li>
+            <li>Stand up</li>
+            <li>Exit classroom</li>
+            <li>Exit school</li>
+            <li>Walk across street</li>
+            <li>Wait to be picked up</li>
+        </ol>
+        <table border=4>
+        <tr><td>Q</td><td>W</td></tr>
+        <tr><td>A</td><td>S</td></tr>
+        </table>
+        <div id="myCopy" oncopy = "{
+		document.getElementById('myCopy').innerHTML = 'Even webpages have copy protection!'
+		}">Copy me comrade
+		</div>
+		<br>
+		<div id="myPaste" >
+		<textarea onpaste = "{
+		document.getElementById('myPaste').innerHTML = 'Even webpages have write protection!'
+		}">Paste your clipboard here
+		</textarea>
+		</div>
+		<br>
+		<p>Comparison of some Intel Sandy Bridge mobile CPUs:</p>
+		<table border=2 style="color:green">
+	    <tr>
+        <td><p style="color:purple">Model Name</td>
+        <td><p style="color:purple">Cores and Threads</td>		
+        <td><p style="color:purple">Other Features</td>
+        <td><p style="color:purple">Family</td>
+        </tr>
+        <tr>
+        <td><p style="color:purple">i5-2520M</td>
+        <td><p style="color:purple">2 Cores 4 Threads</td>		
+        <td><p style="color:purple">vPro</td>
+        <td><p style="color:purple">Core i5</td>
+        </tr>
+        <tr>
+        <td><p style="color:purple">i7-2670QM</td>
+        <td><p style="color:purple">4 Cores 8 Threads</td>		
+        <td><p style="color:purple">VT-X, No VT-D</td>
+        <td><p style="color:purple">Core i7</td>
+        </tr>
+        <tr>
+        <td><p style="color:purple">i7-2720QM</td>
+        <td><p style="color:purple">4 Cores 8 Threads</td>		
+        <td><p style="color:purple">vPro</td>
+        <td><p style="color:purple">Core i7</td>
+        </tr>
+		</table>
+		<form name="form1">
+		    <p>Username:</p><input type=text value=""><br>
+		    <p>Password:</p><input type=password value=""><br>
+		    <p>Get Trumped:</p><input type=checkbox><br>
+		    <p>Trumping speed:</p><input type=range>
+		    <br>
+		    <select name="select1" size=1>
+		    <option value="Blank" title="There is a right answer.">Do you support the Donald?
+            <option value="First">Yes
+            <option value="Second">No
+            </select>
+            <br>
+            <input type=submit value="Get Trumped">
+		</form>
+		</div>
+    </body>
+</html>
