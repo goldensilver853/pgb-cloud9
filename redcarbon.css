@@ -1,0 +1,47 @@
+html {
+   	     font-family: Arial, Helvetica, sans-serif;
+    }
+
+#body {
+	     background-attachment: fixed;
+         border-top-style:ridge;
+         border-style:ridge;
+         border-width:15px;
+         border-color:red ;
+		 font-family: Arial, Helvetica, sans-serif;
+     }
+     
+#main {
+                width: 1000px;
+                background-attachment:fixed;
+                padding: 25px;
+                border: 5px solid red;
+                border-style: ridge;
+                margin: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color:darkred;
+      }
+
+p { 
+	     font-family: Arial, Helvetica, sans-serif;
+  }
+  
+h2 {
+	     font-family: Arial, Helvetica, sans-serif;
+}	
+
+body {
+         background-image: url("redcarbon.jpg");
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-size: 1680px 1050px;
+}
+
+.rlMarquee {
+font-style:italic;
+line-height:1.3em;
+padding:1.5%;
+margin:auto;
+
+}

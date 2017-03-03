@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Javascript</title>
+        <script>
+        (function () {
+
+            //#region Constants
+            var NOT_APPLICABLE = "N/A";
+            //#endregion
+
+            //#region Helper Methods
+            function setBatteryLevel(level, callback) {
+                document.getElementById("level").innerHTML = "Battery Level: " + level * 100 + "%";
+
+                if (callback && typeof (callback) === "function") {
+                    callback();
+                }
+            };
+
+            function setChargingStatus(status, callback) {
+                document.getElementById("charging").innerHTML = "Charging Status: " + (status === NOT_APPLICABLE ? NOT_APPLICABLE : (status === true ? "Charging" : "Un-plugged"));
+
+                if (callback && typeof (callback) === "function") {
+                    callback();
+                }
+            };
+            //#endregion
+
+            try {
+
+                navigator.getBattery().then(function (battery) {
+                    // When initial promise from navigator.getBattery() is recieved set the current statuses.
+                    setBatteryLevel(battery.level);
+                    setChargingStatus(battery.charging);
+
+                    battery.onlevelchange = function (evt) { // Event info is available as param
+                        var _level = battery.level;
+                        setBatteryLevel(_level, function () {
+                            console.log("Battery level changed: " + _level, battery);
+                        });
+                    };
+
+                    battery.onchargingchange = function (evt) { // Event info is available as param
+                        var _charging = battery.charging;
+                        setChargingStatus(_charging, function () {
+                            console.log("Battery charging status changed: " + _charging, battery);
+                        });
+                    }
+                });
+            }
+            catch (e) {
+                // Catch the error if navigator.getBattery isn't defined
+                document.getElementById("error").innerHTML = "Unable to retrieve battery status. You may be using an incompatible browser.<br/><br/>\
+            At the time of this demo, the Battery Status API is only available in Google Chrome 38+ or Opera 25+ and is in Working Draft status.<br/><br/>\
+            Error Message: " + e;
+
+                // Update
+                setBatteryLevel(NOT_APPLICABLE);
+                setChargingStatus(NOT_APPLICABLE);
+
+            }
+        })();
+        
+        
+        var count = 1;
+        function setColor(btn, color){
+            
+            var elem = document.getElementById("button2");
+            if (elem.value=="On") elem.value = "Off";
+            else elem.value = "On";
+            
+
+            if (count == 0) {
+                elem.style.backgroundColor = "green"
+                count = 1;        
+            }
+            else {
+                elem.style.backgroundColor = "red"
+                count = 0;
+            }
+            
+        }
+        
+        
+    </script>
+    </head>
+    <body>
+        <h1 align=center>T3A03-Javascript-Nick</h1>
+        <br>
+        <textarea id="text1">Type your feelings here</textarea>
+        <br>
+        <input type=button value="Click here" onclick="{
+        document.getElementById('out1').innerHTML = document.getElementById('text1').value
+        }">
+        <br>
+        <div id="out1">Your output is here</div>
+        <br>
+        <div id="div2">
+        <input type=button value="On" id="button2" style= "color:white" onclick="setColor()">
+        </div>
+        <br>
+        <br>
+        <br>
+        <span id="level"></span>
+        <br>
+        <span id="charging"></span>
+        <br>
+        <span id="error" style="color: red"></span>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>If Loops</title>
+
+    </head>
+    <body>
+        <h1 align=center>T3A05-If Loops</h1>
+        <p>Enter your name into the text area below.</p>
+        <textarea id="maintext">Nick</textarea>
+        <br>
+        <input type=button value="Click Here" onclick=loop1()>
+        <script>
+        function loop1(){
+			for(myLoop=1; myLoop<=100; myLoop++) {
+
+				if((myLoop>= 4) && (myLoop<= 7)){
+					document.getElementById('myDiv01').innerHTML += '<font color=red>' + myLoop + '<font color=red>' + document.getElementById('maintext').value + '<br> </font>'
+				} 
+				else if((myLoop>= 11) && (myLoop<= 13)){
+					document.getElementById('myDiv01').innerHTML += '<font color=green>' + myLoop + '<font color=green>' + document.getElementById('maintext').value + '<br> </font>'
+				} 
+				else {
+				   	document.getElementById('myDiv01').innerHTML += myLoop + document.getElementById('maintext').value + '<br>' 
+				}
+			}
+        }
+        </script>
+        <div id="myDiv01"></div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Loops</title>
+    </head>
+    <body>
+        <h1 align=center>T3A04-Loops-Nick</h1>
+        <br>
+        <textarea id="text1">Type your feelings here</textarea>
+        <br>
+        <input type=button value="Click here" onclick="{
+        document.getElementById('out1').innerHTML = document.getElementById('text1').value
+        }">
+        <br>
+<textarea id="myArea01"> 4 </textarea><br><br>
+
+
+
+
+
+
+
+
+
+<input type=button value="click me" onclick="{  
+  myTemp = 0
+
+  myValue = parseInt(document.getElementById('myArea01').value)
+
+   document.getElementById('myDiv01').innerHTML = '1 loop = ' + document.getElementById('myArea01').value + '<br>'
+   
+  for (myLoop=2; myLoop<=5; myLoop++){
+      
+     myTemp = myValue + myValue + 1
+     
+     document.getElementById('myDiv01').innerHTML += 
+          +myTemp + ' = ' + myValue + ' + ' + myValue + ' + 1 <br>'
+      myValue = parseInt(myTemp)
+  }
+
+
+}"><br><br>
+
+<div id="myDiv01">Output here</div>
+        <div id="div2">
+        <input type=button value="On" id="button2" style= "color:white" onclick="setColor()">
+        </div>
+    </body>
+</html>
