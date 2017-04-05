@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Arrays</title>
+    </head>
+<body>
+    <h1 align=center>T3A09-Arrays</h1>
+    <br>
+
+<script>
+    document.names = new Array(7)
+    
+    document.names[0] = 'God Emperor Nick'
+    document.names[1] = 'King Nick'
+    document.names[2] = 'Excellent Nick'
+    document.names[3] = 'Nick the Great'
+    document.names[4] = 'President Nick'
+    document.names[5] = 'Fuhrer Nick'
+    document.names[6] = 'Sir Nick'
+
+
+    function randomColor(){
+        rc = "#";
+        for(i=0;i<6;i++){
+            rc += Math.floor(Math.random()*16).toString(16);
+        }
+        return rc;
+    }
+    
+</script>
+<textarea id="maintext">Nick</textarea>
+<br>
+<p>Type something in this textarea prior to pressing "Push the Array".</p>
+<br>
+<input type=button value="Display the Array" onclick="{
+  document.getElementById('main').innerHTML = ''
+  for (myLoop = 0; myLoop <= names.length -1; myLoop++){
+document.getElementById('main').innerHTML += myLoop +': '+ document.names[myLoop]+' <br>' 
+  }
+}">
+<br>
+<input type=button value="Pop the Array" onclick="{
+    names.pop();
+      document.getElementById('main').innerHTML = ''
+      for (myLoop = 0; myLoop <= names.length -1; myLoop++){
+    document.getElementById('main').innerHTML += myLoop +': '+ document.names[myLoop]+' <br>' 
+  }
+}">
+<br>
+<input type=button value="Push to the Array" onclick="{
+    names.push(document.getElementById(&#34;maintext&#34;).value);
+      document.getElementById('main').innerHTML = ''
+      for (myLoop = 0; myLoop <= names.length -1; myLoop++){
+    document.getElementById('main').innerHTML += myLoop +': '+ document.names[myLoop]+' <br>' 
+  }
+}">
+<br>
+<input type=button value="Sort the Array" onclick="{
+    names.sort();
+      document.getElementById('main').innerHTML = ''
+      for (myLoop = 0; myLoop <= names.length -1; myLoop++){
+    document.getElementById('main').innerHTML += myLoop +': '+ document.names[myLoop]+' <br>' 
+  }
+}">
+<br>
+<input type=button value="Colourise the Array" onclick="{
+  document.getElementById('main').innerHTML = ''
+  document.getElementById('main').style.color = randomColor();
+  for (myLoop = 0; myLoop <= names.length -1; myLoop++){
+document.getElementById('main').innerHTML += myLoop +': '+ document.names[myLoop]+' <br>' 
+  }
+}">
+
+<div id="main"></div>
+
+</body>
+</html>
+

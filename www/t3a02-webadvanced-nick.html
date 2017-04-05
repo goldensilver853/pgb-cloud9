@@ -86,15 +86,19 @@
             document.getElementById('numOut').innerHTML = ' y > 2 and z < 5'
             }
             if ((y > 2) && (z == 5)){
-            document.getElementById('numOut').innerHTML = ' y > 2 and z < 5'
+            document.getElementById('numOut').innerHTML = ' y > 2 and z = 5'
             }
             if ((y < 2) && (z == 5)){
-            document.getElementById('numOut').innerHTML = ' y > 2 and z > 5'
+            document.getElementById('numOut').innerHTML = ' y > 2 and z = 5'
             }
-            
-
-
+            if ((y == 69) || (z == 69)){
+            document.getElementById('numOut').innerHTML = ' either y or z is equal to 69'
+            }
+            if ((y < 1) || (z < 1)){
+            document.getElementById('numOut').innerHTML = ' either y or z is less than 1'
+            }
             }">
+            <p>Key numbers to try: 2, 5, 69, &#60;2</a></p>
             <br>
             <p>Enter X: <input type=text id="valueX" value="1"></p>
             <p>Enter Y: <input type=text id="valueY" value="2"></p>

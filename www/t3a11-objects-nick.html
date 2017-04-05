@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Objects</title>
+        <script>
+        document.myClass = new Array()
+        document.myCounter = 0
+
+
+        // set the object
+        function myStudent(myAge, myName, myImg){
+         this.myStudentAge = myAge
+         this.myStudentName = myName
+         this.myStudentImage = myImg
+         this.myInfo = mystudentInfo
+         this.myReturn = myReturnInfo
+        }
+
+        function mystudentInfo(){
+        document.getElementById('main').innerHTML = ' My name is ' + this.myStudentName + ' and I am ' + this.myStudentAge +' years old. Here is my picture <img width=70 src ='+this.myStudentImage+'><br>'
+         }
+    
+         function myReturnInfo(){
+         return ' My name is ' + this.myStudentName + ' and I am ' + this.myStudentAge +' years old. Here is my picture <img width=70 src ='+this.myStudentImage+'><br>'
+        }
+
+    </script>
+    </head>
+    <body>
+        <h1 align=center>Objects</h1>
+        <br>
+        <input type=button value="Display Bill" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Bill Gates','https://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display William" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','William Henry &#34;Bill&#34; Gates III','https://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Billy" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Billy Boy Gates','http://digitaldaily.allthingsd.com/files/2010/06/gates_hands.jpg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Willy" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Willy Gates who has more money than you','http://hypecrib.com/wp-content/uploads/2016/03/bill-gates-money-e1457397369941.jpg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Billiards" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Billiards Gates','http://i.imgur.com/QaaUPPR.png')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Dolla Bill" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Dolla Bill Gates','http://www.factslides.com/imgs/gates-billionaire.jpg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Gates" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Gates','http://www.geeknaut.com/images/2009/06/normal_bill_gates.jpg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Criminal" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Criminal Gates','https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bill_Gates_mugshot.png/220px-Bill_Gates_mugshot.png')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <input type=button value="Display Ladies" onClick="{
+           document.myCounter ++
+           document.myClass[document.myCounter] = new myStudent('61','Ladies Gates','https://pbs.twimg.com/media/CfQkXVFW8AEXH0U.jpg')
+           document.myClass[document.myCounter].myInfo()
+        }">
+        <br>
+        <p>_____</p>
+        <input type=button value="Show all buttons clicked in order" onClick="{
+           var temp = ''
+           for (myLoop=1; myLoop <= document.myCounter; myLoop++){
+             temp += '#'+myLoop + ': ' + document.myClass[myLoop].myReturn()
+
+           }
+           document.getElementById('main').innerHTML = temp
+        }">
+        <br>
+        <div id="main"></div>
+    </body>
+</html>

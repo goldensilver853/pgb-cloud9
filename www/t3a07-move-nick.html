@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Move</title>
+    </head>
+    <body onkeypress="{
+	if(event.keyCode==97){    document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'}   // small 'a' key go left
+	if(event.keyCode==119){   document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'}   // small 'w' key go up
+	if(event.keyCode==115){   document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'}    //s
+	if(event.keyCode==100){   document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)+5+'px'}   //d
+	
+	if(event.keyCode==100 && event.keyCode==119) {   
+	document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)+5+'px'
+	document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'
+	} //w and d
+	
+	if(event.keyCode==100 && event.keyCode==119) {   
+	document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'
+	document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'
+	} //w and a
+	
+	if(event.keyCode==100 && event.keyCode==115) {   
+	document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)+5+'px'
+	document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'
+	}  //s and d
+	
+	if(event.keyCode==100 && event.keyCode==115) {   
+	document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'
+	document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'
+	}  //s and a
+    }">
+        <h1 align=center>T3A07-Move</h1>
+        <div align=center>
+        <input type=button align=center value="↖" onclick="{
+		document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'
+		}">
+        <input align=center type=button value="↑" onclick="{
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'
+		}">
+		<input type=button align=center value="↗" onclick="{
+		document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)+5+'px'
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)-5+'px'
+		}">
+		</div>
+		<br>
+		<div align=center>
+		<input type=button align=center value="←" onclick="{
+		document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'
+		}">
+		<img id="move1" src="truck.png" style="position:relative; left:0px; top:0px;" width="16" height="16">
+		<input type=button align=center value="→" onclick="{
+		document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left) + 5 + 'px'
+		}">
+		</div>
+		<br>
+		<div align=center>
+		<input type=button align=center value="↙" onclick="{
+		document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)-5+'px'
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'
+		}">
+		<input type=button align=center value="↓" onclick="{
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'
+		}">
+		<input type=button align=center value="↘" onclick="{
+		document.getElementById('move1').style.left  = parseInt(document.getElementById('move1').style.left)+5+'px'
+		document.getElementById('move1').style.top  = parseInt(document.getElementById('move1').style.top)+5+'px'
+		}">
+		</div>
+		<hr>
+
+    </body>
+</html>

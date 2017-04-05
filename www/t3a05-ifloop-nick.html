@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>If Loops</title>
+<style>
+    html {
+   	    background-color:darkgray;
+    }
+</style>
+    </head>
+    <body>
+        <h1 align=center>T3A05-If Loops</h1>
+        <p>Enter your name into the text area below.</p>
+        <textarea id="maintext">Nick</textarea>
+        <br>
+        <input type=button value="Click Here" onclick=loop1()>
+        <script>
+        function loop1(){
+            
+            document.getElementById('myDiv01').innerHTML = ''
+            
+			for(myLoop=1; myLoop<=100; myLoop++) {
+			    
+			    
+
+				if((myLoop>= 4) && (myLoop<= 7)){
+					document.getElementById('myDiv01').innerHTML += '<font color=red>' + myLoop + '<font color=red>' + document.getElementById('maintext').value + '<br> </font>'
+				} 
+				else if((myLoop>= 11) && (myLoop<= 13)){
+					document.getElementById('myDiv01').innerHTML += '<font color=green>' + myLoop + '<font color=green>' + document.getElementById('maintext').value + '<br> </font>'
+				} 
+				else if((myLoop>= 15) && (myLoop<= 20)){
+					document.getElementById('myDiv01').innerHTML += '<span style="background-color: blue">' + myLoop + document.getElementById('maintext').value + '</span> <br>'
+				} 
+				else if((myLoop>= 20) && (myLoop %2 != 0)){
+					document.getElementById('myDiv01').innerHTML += '<font color=yellow>' + myLoop + document.getElementById('maintext').value + '</font> <br>'
+				} 
+				else {
+				   	document.getElementById('myDiv01').innerHTML += myLoop + document.getElementById('maintext').value + '<br>' 
+				}
+			}
+        }
+        </script>
+        <div id="myDiv01"></div>
+    </body>
+</html>
